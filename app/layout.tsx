@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Davide Marcoli",
-  description: "Personal website of Davide Marcoli, a Swiss developer based near Zurich.",
+  description:
+    "Personal website of Davide Marcoli, a Swiss developer based near Zurich.",
 };
 
 export default function RootLayout({
