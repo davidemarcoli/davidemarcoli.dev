@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Experience from "@/components/experience";
 import Education from "@/components/education";
 import Skill from "@/components/skill";
+import Project from "@/components/project";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,6 +16,8 @@ export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const educationRef = useRef<HTMLDivElement>(null);
+  const languageSkillsRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -82,41 +85,127 @@ export default function Home() {
           },
         },
       );
-    }, sectionRef);
 
-    // Animate the education section
-    gsap.fromTo(
-      educationRef.current,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        delay: 0.6,
-        scrollTrigger: {
-          trigger: educationRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse",
+      // Animate the education section
+      gsap.fromTo(
+        educationRef.current,
+        {
+          opacity: 0,
+          y: 50,
         },
-      },
-    );
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.6,
+          scrollTrigger: {
+            trigger: educationRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+
+      // Animate the language skills section
+      gsap.fromTo(
+        languageSkillsRef.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 0.8,
+          scrollTrigger: {
+            trigger: languageSkillsRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+
+      // Animate the skills section
+      gsap.fromTo(
+        skillsRef.current,
+        {
+          opacity: 0,
+          y: 50,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power2.out",
+          delay: 1,
+          scrollTrigger: {
+            trigger: skillsRef.current,
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        },
+      );
+    }, sectionRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
     <div className="relative w-full min-h-dvh">
-      <div className="bg-white h-dvh flex items-center justify-center">
+      <nav className="fixed top-0 w-screen p-4 flex z-[9999] mix-blend-difference backdrop-blur">
+        <div className="flex-1 hidden sm:visible">
+          <a href="#home" className="no-underline text-white text-[13.5px]">
+            Davide Marcoli
+          </a>
+        </div>
+        <div className="flex-1 flex gap-4 justify-center">
+          <a
+            target="_blank"
+            href="https://github.com/davidemarcoli"
+            className="no-underline text-white text-[13.5px] font-medium"
+          >
+            GitHub
+          </a>
+          <a
+            target="_blank"
+            href="https://ch.linkedin.com/in/davide-marcoli-3b2b321bb"
+            className="no-underline text-white text-[13.5px] font-medium"
+          >
+            LinkedIn
+          </a>
+          <a
+            target="_blank"
+            href="mailto:davide@marcoli.ch"
+            className="no-underline text-white text-[13.5px] font-medium"
+          >
+            Mail
+          </a>
+        </div>
+        <div className="flex-1 flex justify-end hidden sm:visible">
+          <a
+            href="#home"
+            className="no-underline text-white text-[13.5px] font-medium"
+          >
+            Reload
+          </a>
+        </div>
+      </nav>
+      <div
+        id="home"
+        className="bg-white h-dvh flex items-center justify-center"
+      >
         <div className="text-4xl font-bold text-black">Davide Marcoli</div>
       </div>
       <div
         ref={sectionRef}
-        className="min-h-dvh flex flex-col py-8 max-w-4xl mx-auto"
+        id="about"
+        className="min-h-dvh flex flex-col py-8 px-4 sm:px-0 max-w-4xl mx-auto"
       >
         <div ref={gradeRef} className="mb-8 pb-4 border-b-2 border-white">
           <p className="text-lg md:text-xl text-gray-100 mb-3">
@@ -206,7 +295,10 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="mb-8 pb-4 border-b-2 border-white">
+        <div
+          ref={languageSkillsRef}
+          className="mb-8 pb-4 border-b-2 border-white"
+        >
           <p className="text-sm text-gray-300 mb-1">Language Skills</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-sm text-gray-100 mt-3">
             <div>
@@ -223,7 +315,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="pb-4">
+        <div ref={skillsRef} className="pb-4">
           <p className="text-sm text-gray-300 mb-1">Skills</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm text-gray-100 mt-3">
             <Skill>HTML/CSS</Skill>
@@ -245,37 +337,20 @@ export default function Home() {
         </div>
       </div>
       <div id="projects" className="bg-black min-h-96vh p-8">
-        <h1 className="text-white text-6xl font-sans font-light mb-4 px-8">
+        <h1 className="text-white text-4xl sm:text-6xl font-sans font-light mb-4 px-8">
           Projects
         </h1>
-        <p className="text-gray-400 text-lg mb-16 px-8">
+        <p className="text-gray-400 text-md sm:text-lg mb-16 px-8">
           Showcasing my favorite works and collaborations in web development.
         </p>
         <div className="w-full h-px bg-white"></div>
-        <div className="relative w-full py-8 cursor-pointer flex items-center justify-between">
-          <div className="relative z-10 px-8 flex-grow">
-            <h2 className="text-white text-5xl font-sans font-light">
-              SIX Web Components
-            </h2>
-          </div>
-        </div>
+        <Project title="SIX Web Components" />
         <div className="w-full h-px bg-white"></div>
-        <div className="relative w-full py-8 cursor-pointer flex items-center justify-between">
-          <div className="relative z-10 px-8 flex-grow">
-            <h2 className="text-white text-5xl font-sans font-light">
-              Riven
-            </h2>
-          </div>
-        </div>
+        <Project title="Riven" />
         <div className="w-full h-px bg-white"></div>
-        <div className="relative w-full py-8 cursor-pointer flex items-center justify-between">
-          <div className="relative z-10 px-8 flex-grow">
-            <h2 className="text-white text-5xl font-sans font-light">
-              davidemarcoli.dev
-            </h2>
-          </div>
-        </div>
+        <Project title="davidemarcoli.dev" />{" "}
       </div>
+      <div className="w-full h-px bg-white"></div>
     </div>
   );
 }
