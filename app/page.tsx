@@ -220,7 +220,7 @@ export default function Home() {
         id="home"
         className="bg-white h-dvh flex items-center justify-center"
       >
-        <div ref={nameRef} className="text-6xl font-bold text-black">Davide Marcoli</div>
+        <div ref={nameRef} className="text-4xl sm:text-6xl font-bold text-black">Davide Marcoli</div>
       </div>
       <div
         ref={sectionRef}
