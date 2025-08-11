@@ -229,14 +229,14 @@ export default function Home() {
             <Skill>HTML/CSS</Skill>
             <Skill>TS/JS</Skill>
             <Skill>Angular</Skill>
+            <Skill>React</Skill>
             <Skill>Spring</Skill>
             <Skill>Docker</Skill>
             <Skill>Kubernetes</Skill>
             <Skill>Java</Skill>
             <Skill>Python</Skill>
-            <Skill>AWS</Skill>
-            <Skill>React</Skill>
-            <Skill>ArgoCD</Skill>
+            <Skill>Langchain</Skill>
+            <Skill>Postgres (pgvector)</Skill>
             <Skill>Git</Skill>
           </div>
           {/* <button className="text-black bg-white rounded-sm p-2 w-full mt-5">
