@@ -3,14 +3,19 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import Experience from "@/components/experience";
 import Education from "@/components/education";
 import Skill from "@/components/skill";
 import Project from "@/components/project";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrambleTextPlugin);
 
 export default function Home() {
+  const headerNameRef = useRef<HTMLDivElement>(null);
+  const nameRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
   const gradeRef = useRef<HTMLDivElement>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -19,8 +24,24 @@ export default function Home() {
   const languageSkillsRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
+  useGSAP(
+    () => {
+
+      const scrambleTextConfig = {
+        scrambleText: {
+          text: "{original}",
+          chars: "upperAndLowerCase",
+          speed: 0.5,
+        },
+        duration: 2,
+      };
+
+      // Animate the header name
+      gsap.to(headerNameRef.current, scrambleTextConfig);
+
+      // Animate the home section
+      gsap.to(nameRef.current, scrambleTextConfig);
+
       // Animate the grade section
       gsap.fromTo(
         gradeRef.current,
@@ -151,17 +172,16 @@ export default function Home() {
           },
         },
       );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <div className="relative w-full min-h-dvh">
       <nav className="fixed top-0 w-screen p-4 flex z-[9999] mix-blend-difference backdrop-blur">
-        <div className="flex-1 hidden sm:visible">
+        <div className="flex-1 hidden sm:block">
           <a href="#home" className="no-underline text-white text-[13.5px]">
-            Davide Marcoli
+            <div ref={headerNameRef}>Davide Marcoli</div>
           </a>
         </div>
         <div className="flex-1 flex gap-4 justify-center">
@@ -187,7 +207,7 @@ export default function Home() {
             Mail
           </a>
         </div>
-        <div className="flex-1 flex justify-end hidden sm:visible">
+        <div className="flex-1 justify-end hidden sm:flex">
           <a
             href="#home"
             className="no-underline text-white text-[13.5px] font-medium"
@@ -200,7 +220,7 @@ export default function Home() {
         id="home"
         className="bg-white h-dvh flex items-center justify-center"
       >
-        <div className="text-4xl font-bold text-black">Davide Marcoli</div>
+        <div ref={nameRef} className="text-6xl font-bold text-black">Davide Marcoli</div>
       </div>
       <div
         ref={sectionRef}
