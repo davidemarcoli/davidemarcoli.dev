@@ -1,10 +1,10 @@
 export default function Home() {
   return (
-    <div className="relative w-full min-h-screen">
-      <div className="bg-white h-screen flex items-center justify-center">
+    <div className="relative w-full min-h-dvh">
+      <div className="bg-white h-dvh flex items-center justify-center">
         <div className="text-4xl font-bold text-black">Davide Marcoli</div>
       </div>
-      <div className="h-screen flex flex-col my-8 max-w-4xl mx-auto">
+      <div className="h-dvh flex flex-col py-8 max-w-4xl mx-auto">
         <div className="mb-8 pb-4 border-b-2 border-white">
           <p className="text-lg md:text-xl text-gray-100 mb-3">
             Application Developer EFZ ≈ 5.6 Final Grade
