@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
@@ -10,8 +10,7 @@ import Skill from "@/components/skill";
 import Project from "@/components/project";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrambleTextPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
 export default function Home() {
   const headerNameRef = useRef<HTMLDivElement>(null);
@@ -306,12 +305,12 @@ export default function Home() {
             <Education
               institution="Vocational School"
               location="Technische Berufsschule Zurich / Berufsmaturitätsschule Zurich, CH"
-              dates="Aug 2020-Aug 2025"
+              dates="Aug 2020-Aug 2024"
             />
             <Education
               institution="Bachelor of Science in Computer Science"
               location="ZHAW Zurich University of Applied Sciences, CH"
-              dates="Aug 2025-Aug 2028 (anticipated)"
+              dates="Aug 2024-Aug 2028 (anticipated)"
             />
           </div>
         </div>
@@ -322,7 +321,7 @@ export default function Home() {
           <p className="text-sm text-gray-300 mb-1">Language Skills</p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-2 text-sm text-gray-100 mt-3">
             <div>
-              <span className="font-bold">German:</span> Native Language
+              <span className="font-bold">German:</span> Native
             </div>
             <div>
               <span className="font-bold">English:</span> Advanced
@@ -331,7 +330,7 @@ export default function Home() {
               <span className="font-bold">French:</span> Intermediate
             </div>
             <div>
-              <span className="font-bold">Italian:</span> Basic Knowledge
+              <span className="font-bold">Italian:</span> Beginner
             </div>
           </div>
         </div>
