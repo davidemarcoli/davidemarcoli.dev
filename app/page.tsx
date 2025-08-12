@@ -22,6 +22,29 @@ export default function Home() {
   const educationRef = useRef<HTMLDivElement>(null);
   const languageSkillsRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
+  const underlineRef = useRef<HTMLDivElement>(null); // underline for hero
+
+  // Hero reveal (lightweight clip-path wipe + underline)
+  useGSAP(() => {
+    const nameEl = nameRef.current;
+    const underlineEl = underlineRef.current;
+    if (!nameEl || !underlineEl) return;
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReduced) {
+      gsap.set(nameEl, { clipPath: "inset(0% 0% 0% 0%)", opacity: 1 });
+      gsap.set(underlineEl, { scaleX: 1, transformOrigin: "left center" });
+      return;
+    }
+
+    gsap.set(nameEl, { clipPath: "inset(0% 100% 0% 0%)", willChange: "clip-path" });
+    gsap.set(underlineEl, { scaleX: 0, transformOrigin: "left center" });
+
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    tl.to(nameEl, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.9 }, 0)
+      .fromTo(nameEl, { y: 12, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 0)
+      .to(underlineEl, { scaleX: 1, duration: 0.6 }, 0.5);
+  }, []);
 
   useGSAP(
     () => {
@@ -38,8 +61,8 @@ export default function Home() {
       // Animate the header name
       gsap.to(headerNameRef.current, scrambleTextConfig);
 
-      // Animate the home section
-      gsap.to(nameRef.current, scrambleTextConfig);
+      // Remove scramble from the home section (replaced by reveal)
+      // gsap.to(nameRef.current, scrambleTextConfig);
 
       // Animate the grade section
       gsap.fromTo(
@@ -219,7 +242,10 @@ export default function Home() {
         id="home"
         className="bg-white h-dvh flex items-center justify-center"
       >
-        <div ref={nameRef} className="text-4xl sm:text-6xl font-bold text-black">Davide Marcoli</div>
+        <div className="flex flex-col items-center">
+          <div ref={nameRef} className="text-4xl sm:text-6xl font-bold text-black">Davide Marcoli</div>
+          <div ref={underlineRef} className="mt-3 h-[2px] bg-black w-24 origin-left scale-x-0" />
+        </div>
       </div>
       <div
         ref={sectionRef}
