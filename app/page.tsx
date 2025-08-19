@@ -9,6 +9,7 @@ import Education from "@/components/education";
 import Skill from "@/components/skill";
 import Project from "@/components/project";
 import { useGSAP } from "@gsap/react";
+import EducationTimeline from "@/components/education-timeline";
 
 gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
@@ -333,6 +334,7 @@ export default function Home() {
         </div>
         <div ref={educationRef} className="mb-8 pb-4 border-b-2 border-white">
           <p className="text-sm text-gray-300 mb-1">Education</p>
+          {/* <EducationTimeline /> */}
           <div className="space-y-3">
             <Education
               institution="Primary School"
