@@ -32,7 +32,7 @@ export default function Home() {
     if (!nameEl || !underlineEl) return;
 
     const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
+      "(prefers-reduced-motion: reduce)"
     ).matches;
     if (prefersReduced) {
       gsap.set(nameEl, { clipPath: "inset(0% 0% 0% 0%)", opacity: 1 });
@@ -52,12 +52,12 @@ export default function Home() {
         nameEl,
         { y: 12, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
-        0,
+        0
       )
       .to(
         underlineEl,
         { scaleX: 1, duration: 0.7, ease: "back.out(1.4)" },
-        0.5,
+        0.5
       );
   }, []);
 
@@ -96,7 +96,7 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
 
       // Animate the about section
@@ -118,7 +118,7 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
 
       // Animate the experience section
@@ -140,7 +140,7 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
 
       // Animate the education section
@@ -162,7 +162,7 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
 
       // Animate the language skills section
@@ -184,7 +184,7 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
 
       // Animate the skills section
@@ -206,10 +206,10 @@ export default function Home() {
             end: "bottom 20%",
             toggleActions: "play none none reverse",
           },
-        },
+        }
       );
     },
-    { scope: sectionRef },
+    { scope: sectionRef }
   );
 
   return (
@@ -304,6 +304,35 @@ export default function Home() {
         </div>
         <div ref={experienceRef} className="mb-8 pb-4 border-b-2 border-white">
           <p className="text-sm text-gray-300 mb-1">Professional Experience</p>
+          <div className="mb-4">
+            <p className="text-base font-bold text-gray-100 mb-1">
+              Working Student Software Engineering
+            </p>
+            <p className="text-sm text-gray-300 mb-1">
+              SIX Group AG Zurich, CH
+            </p>
+            <p className="text-xs text-gray-500 mb-3">Aug 2024-Present</p>
+            <ul className="list-none pl-0 space-y-3 text-sm text-gray-100">
+              <Experience>
+                Taking part in research and development of a new ai chatbot for
+                large collection of unstructured data
+              </Experience>
+              <Experience>
+                Implementing modular components for internal ui library
+              </Experience>
+              <Experience>
+                Member of the core team for the
+                <a
+                  href="https://github.com/six-group/six-webcomponents"
+                  target="_blank"
+                  className="underline duration-500 hover:text-zinc-300 mx-1"
+                >
+                  six ui library
+                </a>
+                to optimize consistency and developer experience.
+              </Experience>
+            </ul>
+          </div>
           <div className="mb-3">
             <p className="text-base font-bold text-gray-100 mb-1">
               Application Developer EFZ
@@ -311,23 +340,23 @@ export default function Home() {
             <p className="text-sm text-gray-300 mb-1">
               SIX Group AG Zurich, CH
             </p>
-            <p className="text-xs text-gray-500 mb-3">Aug 2020-Current</p>
+            <p className="text-xs text-gray-500 mb-3">Aug 2020-Aug 2024</p>
             <ul className="list-none pl-0 space-y-3 text-sm text-gray-100">
               <Experience>
                 Designing and implementing a risk management tool for internal
                 auditing to improve compliance and efficiency.
               </Experience>
               <Experience>
-                Implemented a CI/CD infrastructure with OpenShift for efficient
-                deployments
+                Implementing a rule based system for validating OpenAPI specs
               </Experience>
               <Experience>
-                Automated tests with GitLab pipelines to ensure scalable and
-                reliable releases
+                Working together with experts from various fields to develop an
+                application framework to streamline the development process and
+                integration with internal systems.
               </Experience>
               <Experience>
-                Member of the core team component for the six ui library to
-                optimize consistency and developer experience.
+                Member of the core team for the six ui library to optimize
+                consistency and developer experience.
               </Experience>
             </ul>
           </div>
