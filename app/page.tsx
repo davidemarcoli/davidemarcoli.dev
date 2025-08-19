@@ -321,15 +321,17 @@ export default function Home() {
                 Implementing modular components for internal ui library
               </Experience>
               <Experience>
-                Member of the core team for the
-                <a
-                  href="https://github.com/six-group/six-webcomponents"
-                  target="_blank"
-                  className="underline duration-500 hover:text-zinc-300 mx-1"
-                >
-                  six ui library
-                </a>
-                to optimize consistency and developer experience.
+                <div>
+                  Member of the core team for the
+                  <a
+                    href="https://github.com/six-group/six-webcomponents"
+                    target="_blank"
+                    className="underline duration-500 hover:text-zinc-300 mx-1"
+                  >
+                    six ui library
+                  </a>
+                  to optimize consistency and developer experience.
+                </div>
               </Experience>
             </ul>
           </div>
