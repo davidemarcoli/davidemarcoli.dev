@@ -366,19 +366,9 @@ export default function Home() {
           {/* <EducationTimeline /> */}
           <div className="space-y-3">
             <Education
-              institution="Primary School"
-              location="Primary School Illnau, CH"
-              dates="Aug 2011-Aug 2017"
-            />
-            <Education
-              institution="Secondary School"
-              location="Secondary School Illnau, CH"
-              dates="Aug 2017-Aug 2020"
-            />
-            <Education
-              institution="Basic Apprenticeship Year"
-              location="NoserYoung Zurich, CH"
-              dates="Aug 2020-Aug 2021"
+              institution="Bachelor of Science in Computer Science"
+              location="ZHAW Zurich University of Applied Sciences, CH"
+              dates="Aug 2024-Aug 2028 (anticipated)"
             />
             <Education
               institution="Vocational School"
@@ -386,9 +376,19 @@ export default function Home() {
               dates="Aug 2020-Aug 2024"
             />
             <Education
-              institution="Bachelor of Science in Computer Science"
-              location="ZHAW Zurich University of Applied Sciences, CH"
-              dates="Aug 2024-Aug 2028 (anticipated)"
+              institution="Basic Apprenticeship Year"
+              location="NoserYoung Zurich, CH"
+              dates="Aug 2020-Aug 2021"
+            />
+            <Education
+              institution="Secondary School"
+              location="Secondary School Illnau, CH"
+              dates="Aug 2017-Aug 2020"
+            />
+            <Education
+              institution="Primary School"
+              location="Primary School Illnau, CH"
+              dates="Aug 2011-Aug 2017"
             />
           </div>
         </div>
