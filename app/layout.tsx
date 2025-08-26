@@ -82,6 +82,9 @@ export const metadata: Metadata = {
     address: false,
     email: false,
   },
+  other: {
+    'google-adsense-account': "ca-pub-4333534257966219",
+  },
 };
 
 export const viewport: Viewport = {
