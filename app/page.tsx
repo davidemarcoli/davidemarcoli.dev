@@ -443,13 +443,24 @@ export default function Home() {
           Showcasing my favorite works and collaborations in web development.
         </p>
         <div className="w-full h-px bg-white"></div>
-        <Project title="SIX Web Components" />
+        <Project title="SIX Web Components" href="/projects/six-webcomponents" />
         <div className="w-full h-px bg-white"></div>
-        <Project title="Riven" />
+        <Project title="WOS Formation Generator" href="/projects/wos-formation-generator" />
         <div className="w-full h-px bg-white"></div>
-        <Project title="davidemarcoli.dev" />{" "}
+        <Project title="SIX Mensa" href="/projects/six-mensa" />
+        <div className="w-full h-px bg-white"></div>
+        <Project title="davidemarcoli.dev" href="/projects/davidemarcoli.dev" />
       </div>
-      <div className="w-full h-px bg-white"></div>
+      {/* Footer */}
+      <footer className="bg-white text-black text-center py-6">
+        <nav className="flex justify-center gap-6">
+          <a href="/imprint" className="hover:underline">Imprint</a>
+          <a href="/privacy" className="hover:underline">Privacy</a>
+          <a href="/contact" className="hover:underline">Contact</a>
+        </nav>
+        <p className="mt-4 text-sm">&copy; {new Date().getFullYear()} Davide Marcoli</p>
+      </footer>
+      {/* <div className="w-full h-px bg-white"></div> */}
     </div>
   );
 }
