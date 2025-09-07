@@ -16,6 +16,7 @@ export function CodeBlock({ className, children, languageLabel, language, ...pro
             ) : null}
             <SyntaxHighlighter
                 language={language}
+                // @ts-expect-error -- The `dark` import is valid
                 style={dark}
                 className={cn(
                     "p-4 rounded-lg overflow-x-auto border border-neutral-800",
@@ -27,7 +28,7 @@ export function CodeBlock({ className, children, languageLabel, language, ...pro
                 }}
                 {...props}
             >
-                {children}
+                {[children].flat().join('')}
             </SyntaxHighlighter>
         </div>
     );
