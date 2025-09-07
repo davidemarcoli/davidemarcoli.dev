@@ -10,6 +10,7 @@ import Skill from "@/components/skill";
 import Project from "@/components/project";
 import { useGSAP } from "@gsap/react";
 import EducationTimeline from "@/components/education-timeline";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger, ScrambleTextPlugin);
 
@@ -221,6 +222,12 @@ export default function Home() {
           </a>
         </div>
         <div className="flex-1 flex gap-4 justify-center">
+           <Link
+            href="/posts"
+            className="no-underline text-white text-[13.5px] font-medium"
+          >
+            Posts
+          </Link>
           <a
             target="_blank"
             href="https://github.com/davidemarcoli"
