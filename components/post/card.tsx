@@ -4,14 +4,16 @@ import { cn } from "@/lib/utils";
 interface PostCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   subtitle?: string;
-  tint?: "blue" | "green" | "purple" | "orange" | "pink" | "neutral";
+  tint?: "blue" | "green" | "purple" | "red" | "orange" | "yellow" | "pink" | "neutral";
 }
 
 const tintMap: Record<NonNullable<PostCardProps["tint"]>, string> = {
   blue: "bg-blue-950/30 border-blue-900/50",
   green: "bg-green-950/30 border-green-900/50",
   purple: "bg-purple-950/30 border-purple-900/50",
+  red: "bg-red-950/30 border-red-900/50",
   orange: "bg-orange-950/30 border-orange-900/50",
+  yellow: "bg-yellow-950/30 border-yellow-900/50",
   pink: "bg-pink-950/30 border-pink-900/50",
   neutral: "bg-neutral-900/50 border-neutral-800",
 };

@@ -42,9 +42,7 @@ export default function GradeManagerPage() {
 
             <PostCard className="mb-6">
               <h4 className="text-lg font-medium text-neutral-100 mb-4">Project Language Distribution</h4>
-              <div className="bg-neutral-800 rounded h-48 flex items-center justify-center">
-                <span className="text-neutral-400">[GitHub Language Analysis Chart]</span>
-              </div>
+              <img src="/images/posts/133/language-distribution.png" alt="GitHub Language Distribution Chart" className="rounded" />
               <div className="mt-4 flex justify-center gap-8">
                 <div className="text-center">
                   <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-1" />
@@ -53,6 +51,10 @@ export default function GradeManagerPage() {
                 <div className="text-center">
                   <div className="w-4 h-4 bg-orange-500 rounded-full mx-auto mb-1" />
                   <span className="text-sm text-neutral-400">Java 12.5%</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mx-auto mb-1" />
+                  <span className="text-sm text-neutral-400">JavaScript 0.4%</span>
                 </div>
               </div>
             </PostCard>
@@ -146,9 +148,7 @@ export default function GradeManagerPage() {
 
             <PostCard className="mb-6">
               <h4 className="text-lg font-medium text-neutral-100 mb-4">Kanban Board Overview</h4>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center">
-                <span className="text-neutral-400">[GitHub Projects Kanban Board Screenshot]</span>
-              </div>
+              <img src="/images/posts/133/kanban-board.png" alt="GitHub Projects Kanban Board Screenshot" className="rounded" />
             </PostCard>
 
             <p className="text-neutral-300">
@@ -396,23 +396,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
 
           <h3 className="text-2xl font-semibold text-neutral-100 mb-4">Color Palette</h3>
           <PostCard className="mb-8">
-            <div className="bg-neutral-800 h-32 rounded flex items-center justify-center mb-4">
-              <span className="text-neutral-400">[Color Palette Visualization]</span>
-            </div>
-            <div className="flex justify-center gap-8">
-              <div className="text-center">
-                <div className="w-8 h-8 bg-neutral-200 rounded mx-auto mb-2" />
-                <span className="text-sm font-medium">#232323</span>
-              </div>
-              <div className="text-center">
-                <div className="w-8 h-8 bg-orange-500 rounded mx-auto mb-2" />
-                <span className="text-sm font-medium">#F46B45</span>
-              </div>
-              <div className="text-center">
-                <div className="w-8 h-8 bg-blue-500 rounded mx-auto mb-2" />
-                <span className="text-sm font-medium">#6633FF</span>
-              </div>
-            </div>
+            <img src="/images/posts/133/color-palette.png" alt="Color Palette" className="rounded" />
           </PostCard>
 
           <h3 className="text-2xl font-semibold text-neutral-100 mb-4">Mockups &amp; User Interface</h3>
@@ -424,9 +408,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
           <Grid cols={2}>
             <div>
               <h4 className="text-lg font-medium text-neutral-100 mb-3">Authentication Screens</h4>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[Login &amp; Registration Mockups]</span>
-              </div>
+              <img src="/images/posts/133/auth-mockup.png" alt="Authentication Screen Mockup" className="rounded mb-4" />
               <p className="text-neutral-400 text-sm">
                 The login and registration screens are the first pages users see, making them crucial for conveying a good first
                 impression of our design.
@@ -435,9 +417,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
 
             <div>
               <h4 className="text-lg font-medium text-neutral-100 mb-3">Profile Overview</h4>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[Profile Screen Mockup]</span>
-              </div>
+              <img src="/images/posts/133/profile-mockup.png" alt="Profile Screen Mockup" className="rounded mb-4" />
               <p className="text-neutral-400 text-sm">
                 We wanted to give users a good overview of their activities in the app, showing important statistics at a glance
                 without getting lost in various submenus.
@@ -448,9 +428,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
           <Grid cols={2} className='mt-2'>
             <div>
               <h4 className="text-lg font-medium text-neutral-100 mb-3">Grade Management</h4>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[Add Grade Form Mockup]</span>
-              </div>
+              <img src="/images/posts/133/add-grade-mockup.png" alt="Grades Screen Mockup" className="rounded mb-4" />
               <div className="text-sm text-neutral-400 space-y-2">
                 <p>
                   <strong>Grade:</strong> A score between 1 and 6, can include decimal places
@@ -469,9 +447,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
 
             <div>
               <h4 className="text-lg font-medium text-neutral-100 mb-3">Grade Editing Modal</h4>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[Edit Grade Modal Mockup]</span>
-              </div>
+              <img src="/images/posts/133/edit-grade-mockup.png" alt="Edit Grade Modal Mockup" className="rounded mb-4" />
               <p className="text-neutral-400 text-sm">
                 Users can edit recorded grades through this modal. The data of the grade to be edited is automatically filled in,
                 and users can adjust any fields or delete the grade with the delete button.
@@ -485,9 +461,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
           <Grid cols={2}>
             <div>
               <h3 className="text-xl font-semibold text-neutral-100 mb-4">Entity Relationship Model (ERM)</h3>
-              <div className="bg-neutral-800 h-48 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[ERM Diagram]</span>
-              </div>
+              <img src="/images/posts/133/erm-diagram.png" alt="ERM Diagram" className="rounded mb-4" />
               <p className="text-neutral-400 text-sm">
                 The ERM shows the relationship between Grades and Users, where multiple grades can belong to one user.
               </p>
@@ -495,9 +469,7 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
 
             <div>
               <h3 className="text-xl font-semibold text-neutral-100 mb-4">Entity Relationship Diagram (ERD)</h3>
-              <div className="bg-neutral-800 h-48 rounded flex items-center justify-center mb-4">
-                <span className="text-neutral-400">[ERD Schema]</span>
-              </div>
+              <img src="/images/posts/133/erd-diagram.png" alt="ERD Diagram" className="rounded mb-4" />
               <p className="text-neutral-400 text-sm">The ERD details the actual database schema with field types and constraints.</p>
             </div>
           </Grid>
@@ -548,16 +520,12 @@ public interface GradeRepository extends JpaRepository<Grade, String> {
           <Grid cols={2}>
             <div>
               <h3 className="text-xl font-semibold text-neutral-100 mb-4">User Service Architecture</h3>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center">
-                <span className="text-neutral-400">[User UML Class Diagram]</span>
-              </div>
+              <img src="/images/posts/133/user-uml-class-diagram.png" alt="User UML Class Diagram" className="rounded" />
             </div>
 
             <div>
               <h3 className="text-xl font-semibold text-neutral-100 mb-4">Grade Service Architecture</h3>
-              <div className="bg-neutral-800 h-64 rounded flex items-center justify-center">
-                <span className="text-neutral-400">[Grade UML Class Diagram]</span>
-              </div>
+              <img src="/images/posts/133/grade-uml-class-diagram.png" alt="Grade UML Class Diagram" className="rounded" />
             </div>
           </Grid>
         </PostSection>
