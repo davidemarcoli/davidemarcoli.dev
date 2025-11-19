@@ -16,8 +16,8 @@ export default function ContactPage() {
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3">
                                 <span className="text-neutral-400">Email:</span>
-                                <a href="mailto:davidemarcoli@gmail.com" className="text-blue-400 hover:text-blue-300 transition-colors">
-                                    davidemarcoli@gmail.com
+                                <a href="mailto:davide@marcoli.ch" className="text-blue-400 hover:text-blue-300 transition-colors">
+                                    davide@marcoli.ch
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
@@ -28,8 +28,8 @@ export default function ContactPage() {
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="text-neutral-400">LinkedIn:</span>
-                                <a href="https://linkedin.com/in/davidemarcoli" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
-                                    linkedin.com/in/davidemarcoli
+                                <a href="https://ch.linkedin.com/in/davide-marcoli-3b2b321bb" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 transition-colors">
+                                    linkedin.com/in/davide-marcoli-3b2b321bb
                                 </a>
                             </li>
                         </ul>
