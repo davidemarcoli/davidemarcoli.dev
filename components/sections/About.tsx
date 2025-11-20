@@ -29,7 +29,7 @@ const About = () => {
         const spans = textEl.querySelectorAll('span');
         gsap.to(spans, {
             scrollTrigger: {
-                trigger: sectionRef.current,
+                trigger: textRef.current,
                 start: 'top 70%',
                 end: 'bottom 70%',
                 scrub: 1

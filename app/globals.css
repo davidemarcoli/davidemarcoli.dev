@@ -82,27 +82,7 @@ body {
   transform-origin: 50% 100%;
 }
 
-/* Loader */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #000;
-  z-index: 50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
-.loader-bar {
-  width: 0%;
-  height: 2px;
-  background-color: var(--accent-color);
-  margin-top: 20px;
-}
 
 /* Layout */
 #canvas-container {

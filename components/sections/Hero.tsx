@@ -13,39 +13,33 @@ const Hero = () => {
         gsap.set('.hero-line', { y: 200 });
         gsap.set('.hero-sub', { opacity: 0, y: 20 });
 
-        const handleLoadingComplete = () => {
-            const tl = gsap.timeline();
+        const tl = gsap.timeline();
 
-            tl.to('.hero-line', {
+        tl.to('.hero-line', {
+            y: 0,
+            duration: 1,
+            stagger: 0.15,
+            ease: "power4.out",
+            delay: 0.2 // Small delay for smoother entrance
+        })
+            .to('.hero-sub', {
+                opacity: 1,
                 y: 0,
                 duration: 1,
-                stagger: 0.15,
-                ease: "power4.out"
-            })
-                .to('.hero-sub', {
-                    opacity: 1,
-                    y: 0,
-                    duration: 1,
-                    stagger: 0.1,
-                    ease: "power2.out"
-                }, "-=0.5");
-        };
+                stagger: 0.1,
+                ease: "power2.out"
+            }, "-=0.5");
 
-        window.addEventListener('loading-complete', handleLoadingComplete);
-
-        return () => {
-            window.removeEventListener('loading-complete', handleLoadingComplete);
-        };
     }, []);
 
     return (
         <section className="h-screen w-full flex flex-col justify-center px-6 md:px-20 relative overflow-hidden">
             <div className="hero-content relative z-10" ref={heroRef}>
-                <h1 className="text-[11vw] md:text-[9vw] leading-[0.85] font-bold uppercase tracking-tighter mix-blend-overlay opacity-90">
+                <h1 className="text-[20vw] md:text-[9vw] leading-[0.85] font-bold uppercase tracking-tighter mix-blend-overlay opacity-90">
                     <div className="overflow-hidden"><span className="hero-line inline-block">Davide</span></div>
                     <div className="overflow-hidden"><span className="hero-line inline-block text-transparent stroke-text" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.5)' }}>Marcoli</span></div>
                     <div className="overflow-hidden">
-                        <span className="hero-line inline-block text-[4vw] md:text-[3vw] normal-case tracking-normal font-normal text-[#ccfd3a] mt-4 block">
+                        <span className="hero-line inline-block text-[8vw] md:text-[3vw] normal-case tracking-normal font-normal text-[#ccfd3a] mt-4 block">
                             &lt;Software Engineer /&gt;
                         </span>
                     </div>

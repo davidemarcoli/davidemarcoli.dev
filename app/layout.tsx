@@ -3,7 +3,6 @@ import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/effects/Cursor";
 import NoiseOverlay from "@/components/effects/NoiseOverlay";
-import Loader from "@/components/ui/Loader";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
@@ -96,7 +95,6 @@ export default function RootLayout({
       <body className={`${spaceGrotesk.className} antialiased selection:bg-[#ccfd3a] selection:text-black`}>
         <NoiseOverlay />
         <Cursor />
-        <Loader />
         {children}
       </body>
     </html>
