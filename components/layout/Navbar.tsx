@@ -13,7 +13,7 @@ const Navbar = () => {
                     href="#"
                     className="text-xl font-bold tracking-tighter hoverable inline-block"
                 >
-                    DAVIDE.M
+                    davidemarcoli.dev
                 </Link>
             </Magnetic>
             <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
