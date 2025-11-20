@@ -26,17 +26,17 @@ const Experience = () => {
     return (
         <section id="experience" ref={sectionRef} className="py-24 px-6 md:px-20 relative border-t border-white/5">
             <div className="max-w-6xl w-full mx-auto">
-                <div className="text-sm text-[#ccfd3a] uppercase tracking-widest mb-16 section-header">02 / Experience & Education</div>
+                <div className="text-sm text-accent uppercase tracking-widest mb-16 section-header">02 / Experience & Education</div>
 
                 <div className="space-y-12 relative before:absolute before:left-0 md:before:left-[16rem] before:top-0 before:h-full before:w-[1px] before:bg-white/10">
 
                     {/* Job 1 */}
                     <div className="flex flex-col md:flex-row md:gap-12 relative timeline-item">
                         <div className="md:w-64 flex-shrink-0 mb-2 md:mb-0 text-right md:pr-8">
-                            <div className="text-[#ccfd3a] font-mono text-sm">Aug 2024 — Present</div>
+                            <div className="text-accent font-mono text-sm">Aug 2024 — Present</div>
                             <div className="text-gray-500 text-xs mt-1">Zurich, CH</div>
                         </div>
-                        <div className="flex-grow pl-8 border-l border-[#ccfd3a] md:border-none relative md:before:absolute md:before:left-[-5px] md:before:top-1.5 md:before:w-2.5 md:before:h-2.5 md:before:bg-[#ccfd3a] md:before:rounded-full">
+                        <div className="flex-grow pl-8 border-l border-accent md:border-none relative md:before:absolute md:before:left-[-5px] md:before:top-1.5 md:before:w-2.5 md:before:h-2.5 md:before:bg-accent md:before:rounded-full">
                             <h3 className="text-2xl font-bold">Working Student Software Engineering</h3>
                             <div className="text-gray-400 mb-4">SIX Group AG</div>
                             <p className="text-gray-300 leading-relaxed max-w-2xl">

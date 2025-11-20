@@ -17,10 +17,10 @@ const Navbar = () => {
                 </Link>
             </Magnetic>
             <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <Link href="#about" className="hoverable hover:text-[#ccfd3a] transition-colors">Profile</Link>
-                <Link href="#experience" className="hoverable hover:text-[#ccfd3a] transition-colors">Journey</Link>
-                <Link href="#work" className="hoverable hover:text-[#ccfd3a] transition-colors">Work</Link>
-                <Link href="#contact" className="hoverable hover:text-[#ccfd3a] transition-colors">Contact</Link>
+                <Link href="#about" className="hoverable hover:text-accent transition-colors">Profile</Link>
+                <Link href="#experience" className="hoverable hover:text-accent transition-colors">Journey</Link>
+                <Link href="#work" className="hoverable hover:text-accent transition-colors">Work</Link>
+                <Link href="#contact" className="hoverable hover:text-accent transition-colors">Contact</Link>
             </div>
             <button className="md:hidden hoverable">
                 <Menu />

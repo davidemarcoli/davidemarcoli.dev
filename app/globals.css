@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: #050505;
+  --color-foreground: #ececec;
+  --color-accent: #ccfd3a;
+}
+
 :root {
   --cursor-size: 20px;
   --cursor-hover-size: 60px;
-  --bg-color: #050505;
-  --text-color: #ececec;
-  --accent-color: #ccfd3a;
-  /* Acid Green */
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  @apply bg-background text-foreground;
   overflow-x: hidden;
 }
 
@@ -119,7 +120,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #050505;
+  @apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -128,5 +129,5 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-color);
+  @apply bg-accent;
 }

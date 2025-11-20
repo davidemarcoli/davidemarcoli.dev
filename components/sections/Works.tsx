@@ -38,7 +38,7 @@ const Works = () => {
 
     return (
         <section id="work" ref={sectionRef} className="py-32 px-6 md:px-20 relative">
-            <div className="text-sm text-[#ccfd3a] uppercase tracking-widest mb-16 border-b border-white/10 pb-4 section-header">03 / Selected Works</div>
+            <div className="text-sm text-accent uppercase tracking-widest mb-16 border-b border-white/10 pb-4 section-header">03 / Selected Works</div>
 
             <div className="flex flex-col w-full">
                 {/* Project 1: WOS */}
@@ -46,7 +46,7 @@ const Works = () => {
                     <div className="flex flex-col md:flex-row justify-between items-baseline z-20 relative pointer-events-none">
                         <div className="flex items-center gap-4">
                             <h2 className="text-3xl md:text-6xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-500 text-transparent stroke-text" style={{ WebkitTextStroke: '1px #fff' }}>WOS Formation Gen</h2>
-                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-[#ccfd3a]" />
+                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-accent" />
                         </div>
                         <p className="text-sm md:text-base text-gray-400 mt-2 md:mt-0">Game Utility • Strategy Optimizer</p>
                     </div>
@@ -62,7 +62,7 @@ const Works = () => {
                     <div className="flex flex-col md:flex-row justify-between items-baseline z-20 relative pointer-events-none">
                         <div className="flex items-center gap-4">
                             <h2 className="text-3xl md:text-6xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-500 text-transparent stroke-text" style={{ WebkitTextStroke: '1px #fff' }}>SIX Web Components</h2>
-                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-[#ccfd3a]" />
+                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-accent" />
                         </div>
                         <p className="text-sm md:text-base text-gray-400 mt-2 md:mt-0">Open Source • UI Library</p>
                     </div>
@@ -78,7 +78,7 @@ const Works = () => {
                     <div className="flex flex-col md:flex-row justify-between items-baseline z-20 relative pointer-events-none">
                         <div className="flex items-center gap-4">
                             <h2 className="text-3xl md:text-6xl font-bold uppercase group-hover:translate-x-4 transition-transform duration-500 text-transparent stroke-text" style={{ WebkitTextStroke: '1px #fff' }}>SIX Mensa</h2>
-                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-[#ccfd3a]" />
+                            <ArrowUpRight className="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 text-accent" />
                         </div>
                         <p className="text-sm md:text-base text-gray-400 mt-2 md:mt-0">Utility App • Food & Dining</p>
                     </div>
@@ -91,7 +91,7 @@ const Works = () => {
             </div>
 
             <div className="mt-16 text-center">
-                <Link href="https://github.com/davidemarcoli" target="_blank" className="hoverable inline-block text-[#ccfd3a] border-b border-[#ccfd3a] pb-1 hover:text-white hover:border-white transition-all">View Github Profile</Link>
+                <Link href="https://github.com/davidemarcoli" target="_blank" className="hoverable inline-block text-accent border-b border-accent pb-1 hover:text-white hover:border-white transition-all">View Github Profile</Link>
             </div>
         </section>
     );

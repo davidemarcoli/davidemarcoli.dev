@@ -31,12 +31,12 @@ const Contact = () => {
 
             <div className="relative z-10 max-w-4xl">
                 <h2 className="text-5xl md:text-8xl font-bold uppercase tracking-tighter mb-8 contact-title" ref={titleRef}>
-                    Let's build the <br /> <span className="text-[#ccfd3a]">Future.</span>
+                    Let's build the <br /> <span className="text-accent">Future.</span>
                 </h2>
                 <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto">Interested in my work? Feel free to reach out for collaborations or just a chat.</p>
 
                 <Magnetic>
-                    <a href="mailto:davide@marcoli.ch" className="hoverable inline-flex items-center justify-center px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-[#ccfd3a] transition-colors duration-300">
+                    <a href="mailto:davide@marcoli.ch" className="hoverable inline-flex items-center justify-center px-10 py-5 bg-white text-black text-lg font-bold rounded-full hover:bg-accent transition-colors duration-300">
                         davide@marcoli.ch
                     </a>
                 </Magnetic>

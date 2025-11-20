@@ -39,7 +39,7 @@ const Hero = () => {
                     <div className="overflow-hidden"><span className="hero-line inline-block">Davide</span></div>
                     <div className="overflow-hidden"><span className="hero-line inline-block text-transparent stroke-text" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.5)' }}>Marcoli</span></div>
                     <div className="overflow-hidden">
-                        <span className="hero-line inline-block text-[8vw] md:text-[3vw] normal-case tracking-normal font-normal text-[#ccfd3a] mt-4 block">
+                        <span className="hero-line inline-block text-[8vw] md:text-[3vw] normal-case tracking-normal font-normal text-accent mt-4 block">
                             &lt;Software Engineer /&gt;
                         </span>
                     </div>
@@ -53,7 +53,7 @@ const Hero = () => {
                         <div className="text-right mb-4 text-sm text-gray-500 uppercase tracking-widest">
                             Working @ SIX Group <br /> Studying @ ZHAW
                         </div>
-                        <Link href="#work" className="group hoverable relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-black transition duration-300 ease-out rounded-full bg-[#ccfd3a] shadow-lg">
+                        <Link href="#work" className="group hoverable relative inline-flex items-center justify-center px-8 py-4 overflow-hidden font-medium text-black transition duration-300 ease-out rounded-full bg-accent shadow-lg">
                             <span className="absolute inset-0 w-full h-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></span>
                             <span className="relative flex items-center gap-2">Selected Works <ArrowDownRight className="w-4 h-4" /></span>
                         </Link>

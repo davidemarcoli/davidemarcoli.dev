@@ -92,7 +92,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${spaceGrotesk.className} antialiased selection:bg-[#ccfd3a] selection:text-black`}>
+      <body className={`${spaceGrotesk.className} antialiased selection:bg-accent selection:text-black`}>
         <NoiseOverlay />
         <Cursor />
         {children}

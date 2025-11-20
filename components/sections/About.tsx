@@ -56,16 +56,16 @@ const About = () => {
     return (
         <section id="about" ref={sectionRef} className="min-h-screen py-24 px-6 md:px-20 flex flex-col justify-center relative bg-black/50 backdrop-blur-sm">
             <div className="max-w-6xl w-full mx-auto">
-                <div className="text-sm text-[#ccfd3a] uppercase tracking-widest mb-8 border-b border-white/10 pb-4 section-header">01 / Profile</div>
+                <div className="text-sm text-accent uppercase tracking-widest mb-8 border-b border-white/10 pb-4 section-header">01 / Profile</div>
 
                 <p className="text-2xl md:text-5xl font-medium leading-tight about-text mb-16" ref={textRef}>
                     Hi, I'm Davide. I'm a Software Engineer specializing in modern frontend architectures and backend systems. Currently shaping internal tools at SIX Group while pursuing my CS degree.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
-                    <div className="skill-card p-6 border border-white/10 hover:border-[#ccfd3a]/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
+                    <div className="skill-card p-6 border border-white/10 hover:border-accent/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
                         <div className="flex justify-between items-start mb-4">
-                            <Layers className="w-8 h-8 text-[#ccfd3a]" />
+                            <Layers className="w-8 h-8 text-accent" />
                             <span className="text-xs font-mono text-gray-500">01</span>
                         </div>
                         <h3 className="text-xl font-bold mb-4">Frontend & UI</h3>
@@ -77,9 +77,9 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <div className="skill-card p-6 border border-white/10 hover:border-[#ccfd3a]/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
+                    <div className="skill-card p-6 border border-white/10 hover:border-accent/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
                         <div className="flex justify-between items-start mb-4">
-                            <Server className="w-8 h-8 text-[#ccfd3a]" />
+                            <Server className="w-8 h-8 text-accent" />
                             <span className="text-xs font-mono text-gray-500">02</span>
                         </div>
                         <h3 className="text-xl font-bold mb-4">Backend & AI</h3>
@@ -91,9 +91,9 @@ const About = () => {
                         </ul>
                     </div>
 
-                    <div className="skill-card p-6 border border-white/10 hover:border-[#ccfd3a]/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
+                    <div className="skill-card p-6 border border-white/10 hover:border-accent/50 transition-colors duration-500 group bg-white/5 backdrop-blur-sm rounded-sm">
                         <div className="flex justify-between items-start mb-4">
-                            <Globe className="w-8 h-8 text-[#ccfd3a]" />
+                            <Globe className="w-8 h-8 text-accent" />
                             <span className="text-xs font-mono text-gray-500">03</span>
                         </div>
                         <h3 className="text-xl font-bold mb-4">Languages</h3>
