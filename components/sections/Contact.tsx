@@ -12,6 +12,10 @@ const Contact = () => {
     const sectionRef = useRef<HTMLElement>(null);
     const titleRef = useRef<HTMLHeadingElement>(null);
 
+    const friends = [
+        { name: "Stefan Laux", url: "https://stefan-laux.dev", role: "Frontend Developer" }
+    ];
+
     useEffect(() => {
         gsap.from(titleRef.current, {
             scrollTrigger: {
@@ -42,13 +46,36 @@ const Contact = () => {
                 </Magnetic>
             </div>
 
-            <footer className="absolute bottom-8 w-full flex justify-between px-6 md:px-20 text-xs text-gray-600 uppercase tracking-widest flex-col md:flex-row gap-4 md:gap-0 items-center md:items-start">
-                <div>&copy; 2025 Davide Marcoli</div>
-                <div className="flex space-x-6">
-                    <Link href="/contact" className="hover:text-white transition-colors hoverable">Contact</Link>
-                    <Link href="/imprint" className="hover:text-white transition-colors hoverable">Imprint</Link>
-                    <Link href="/privacy" className="hover:text-white transition-colors hoverable">Privacy</Link>
-                    <Link href="/posts" className="hover:text-white transition-colors hoverable">Blog</Link>
+            <footer className="absolute bottom-8 w-full px-6 md:px-20 text-xs text-gray-600 uppercase tracking-widest">
+                {/* Friends Section */}
+                {friends.length > 0 && (
+                    <div className="mb-6 flex justify-center">
+                        <div className="flex flex-wrap gap-4 items-center justify-center">
+                            <span className="text-gray-500">Friends:</span>
+                            {friends.map((friend) => (
+                                <a
+                                    key={friend.url}
+                                    href={friend.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-white transition-colors hoverable"
+                                >
+                                    {friend.name} <span className="text-gray-500">({friend.role})</span>
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* Bottom Footer Row */}
+                <div className="flex justify-between flex-col md:flex-row gap-4 md:gap-0 items-center md:items-start">
+                    <div>&copy; 2025 Davide Marcoli</div>
+                    <div className="flex space-x-6">
+                        <Link href="/contact" className="hover:text-white transition-colors hoverable">Contact</Link>
+                        <Link href="/imprint" className="hover:text-white transition-colors hoverable">Imprint</Link>
+                        <Link href="/privacy" className="hover:text-white transition-colors hoverable">Privacy</Link>
+                        <Link href="/posts" className="hover:text-white transition-colors hoverable">Blog</Link>
+                    </div>
                 </div>
             </footer>
         </section>
