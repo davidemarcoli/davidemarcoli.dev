@@ -20,6 +20,7 @@ const Navbar = () => {
                 <Link href="#about" className="hoverable hover:text-accent transition-colors">Profile</Link>
                 <Link href="#experience" className="hoverable hover:text-accent transition-colors">Journey</Link>
                 <Link href="#work" className="hoverable hover:text-accent transition-colors">Work</Link>
+                <Link href="/reading" className="hoverable hover:text-accent transition-colors">Reading</Link>
                 <Link href="#contact" className="hoverable hover:text-accent transition-colors">Contact</Link>
             </div>
             <button className="md:hidden hoverable">

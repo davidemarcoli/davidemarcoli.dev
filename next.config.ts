@@ -10,7 +10,12 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
-  turbopack: {}
+  turbopack: {},
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "assets.hardcover.app" },
+    ],
+  },
 };
 
 export default withSerwist(nextConfig);

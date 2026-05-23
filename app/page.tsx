@@ -10,6 +10,7 @@ import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
 import Works from '@/components/sections/Works';
+import CurrentlyReadingStrip from '@/components/sections/CurrentlyReadingStrip';
 import Contact from '@/components/sections/Contact';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +30,7 @@ export default function Home() {
       <About />
       <Experience />
       <Works />
+      <CurrentlyReadingStrip />
       <Contact />
     </main>
   );
